@@ -1,0 +1,15 @@
+<h1>Please login</h1>
+
+<% if flash[:notice] -%>
+<div class="notice"><%= flash[:notice] %></div>
+<% end -%>
+
+<% form_tag :action => "login" do %>
+	<div class="form_couplet"><label for="username">Username</label>
+	<%= text_field_tag('username') %></div>
+
+	<div class="form_couplet"><label for="password">Password</label>
+	<%= password_field_tag('password') %></div>
+
+  <div class="form_action"><%= submit_tag('Login') %></div>
+<% end %>

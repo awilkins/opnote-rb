@@ -1,0 +1,16 @@
+<h1>Add Operation</h1>
+
+<div class="actions">
+  <%= link_to("view-list", :action => "view", :id => @op_list) %>
+</div>
+
+<h2>
+  <%= h(@op_list.surgeon) + ", " + h(@op_list.theatre) + ", " %>
+  <%= @op_list.start_time.strftime('%d/%m/%Y') %>
+</h2>
+
+<% form_tag(:action => "create_entry", :id => @op_list) do %>
+  <%= render(:partial => "entry_form") %>
+  <div class="form_action"><%= submit_tag('Create') %></div>
+<% end %>
+

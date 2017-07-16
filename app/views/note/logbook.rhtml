@@ -1,0 +1,11 @@
+<h1>Create Logbook</h1>
+
+<% if flash[:notice] -%>
+<div class="notice"><%= flash[:notice] %></div>
+<% end -%>
+
+<% form_tag(:action => 'logbook_csv') do %>
+  <div class="form_couplet"><label for="surgeon">Surgeon</label>
+  <%= text_field_tag('surgeon') %></div>
+  <div class="form_action"><%= submit_tag('Create') %></div>
+<% end %>

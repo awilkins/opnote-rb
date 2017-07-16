@@ -1,0 +1,42 @@
+<div class="actions">
+  <%= will_paginate @op_notes, :params => @search_params %>
+</div>
+
+<h1>Operations List</h1>
+
+<% if flash[:notice] -%>
+<div class="notice"><%= flash[:notice] %></div>
+<% end -%>
+
+<%
+start_time=nil
+for note in @op_notes
+  if start_time.nil? || start_time.yday != note.start_time.yday
+    start_time=note.start_time %>
+    <h2><%= start_time.strftime('%A, %B %d') %></h2><%
+  end
+-%>
+  <div class="list_item">
+    <div class="actions">
+      <%= link_to("edit", :action => "edit", :id => note) %>
+      <%= link_to("delete", {:action => "destroy", :id => note},
+                  :confirm => 'Are you sure you want to delete this note?') %>
+      <%= link_to("PDF", :action => "pdf", :id => note) %>
+    </div>
+    <div class="list_item_header">
+      <%= h(note.surname) + ", " + h(note.forename) + " " %>
+      <%= note.crn + " " + note.dob.strftime('%d/%m/%Y') %>
+    </div>
+    <div>
+      <%= " Consultant: " + h(note.cons_surg) %>
+      <%= " Surgeon: " + h(note.surgeon1) %>
+    </div>
+    <div>
+      <%= h(truncate(note.operation, :length => 70)) %>
+    </div>
+  </div>
+<% end -%>
+
+<div class="actions">
+  <%= will_paginate @op_notes, :params => @search_params %>
+</div>

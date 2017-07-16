@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+first:
+  id:           1
+  updated_at:   2006-03-13 10:45:00
+  theatre:      G4
+  start_time:   2006-03-13 10:45:00
+  surgeon:      bill
+  anaesthetist: joe
+another:
+  id:           2
+  updated_at:   2006-03-13 10:45:00
+  theatre:      G4
+  start_time:   2006-03-13 10:45:00
+  surgeon:      fred
+  anaesthetist: bloggs

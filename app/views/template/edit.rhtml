@@ -1,0 +1,6 @@
+<h1>Edit Template</h1>
+<% form_tag(:action => "update", :id => @op_template) do %>
+  <%= render(:partial => "form") %>
+  <div class="form_action"><%= submit_tag('Update') %></div>
+<% end %>
+

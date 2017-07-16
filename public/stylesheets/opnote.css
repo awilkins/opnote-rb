@@ -1,0 +1,359 @@
+/*
+ * OpNote stylesheet
+ */
+
+
+/*
+ * trimmed evgord01
+ */
+html, body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	height: 100%;
+}
+
+body {
+	background-color: #fff;
+	color: #444;
+	font-size: 84%;
+	font-family: "Trebuchet MS", Arial, sans-serif;
+	text-align: center;
+}
+
+a {
+	color: #556379;
+}
+
+a:hover {
+	color: #8496B3;
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 1.3em;
+	font-family: Arial;
+	color: #7B98F8;
+	margin: 0;
+	padding-bottom: 8px;
+}
+
+h2 {
+	font-size: 0.9em;
+	font-family: Arial;
+	color: #62C916;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 8px 0;
+}
+
+h2 a {
+	color: #62C916;
+    text-decoration:    none;
+}
+
+h3 {
+	font-size: 0.9em;
+	font-family: Arial;
+	margin: 0;
+	padding-bottom: 8px;
+}
+
+h4 {
+	font-size: 0.8em;
+	font-family: Arial;
+	color: #8CA1AA;
+	text-transform: uppercase;
+	margin: 0;
+	padding-bottom: 8px;
+}
+
+p  {
+	margin: 0;
+	padding-bottom: 8px;
+}
+
+hr {
+	clear: both;
+	height: 1px;
+	border-top: solid 1px #AACCD5;
+}
+
+img {
+	border: none;
+}
+
+#wrapper {
+	margin: 0 auto;
+	width: 733px;
+	text-align: left;
+	height: 100%;
+}
+
+#head {
+	background-color: #F0F8FA;
+	height: 90px;
+	color: #606d82;
+	border-bottom: 1px solid #fff;
+}
+
+#head div {
+	float: left;
+	clear: right;
+	height: 65px;
+}
+
+#logo {
+	width: 185px;
+}
+
+#logo a {
+	display: block;
+	padding: 46px 0 0 14px;
+	font-size: 18px;
+	letter-spacing: 0;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+#slogan {
+	width: 474px;
+	border-left: 1px solid #A2ADB9;
+}
+
+#slogan span {
+	display: block;
+	padding: 28px 0 0 14px;
+	font-size: 38px;
+	letter-spacing: -2px;
+	color: #91b3bc;
+}
+
+#toplinks {
+	width: 73px;
+}
+
+#toplinks ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#toplinks li {
+	float: left;
+	display: inline;
+	margin-top: 56px;
+}
+
+#toplinks a {
+	display: block;
+	width: 18px;
+	height: 9px;
+}
+
+#toplinks span {
+	display: none;
+}
+
+#tl_home {
+	background-image: url(/images/tl_home.gif);
+	background-repeat: no-repeat;
+}
+
+#tl_contact {
+	background-image: url(/images/tl_contact.gif);
+	background-repeat: no-repeat;
+}
+
+#tl_home a:hover {
+	background-image: url(/images/tl_home-on.gif);
+	background-repeat: no-repeat;
+}
+
+#tl_contact a:hover {
+	background-image: url(/images/tl_contact-on.gif);
+	background-repeat: no-repeat;
+}
+
+#body {
+	float: right;
+	margin-top: 3px;
+	width: 548px;
+	clear: both;
+}
+
+#visual {
+	margin: 16px 0;
+	height: 100px;
+	background-image: url(/images/visual.jpg);
+	background-repeat: no-repeat;
+}
+
+#content {
+	float: left;
+	width: 548px;
+}
+
+#side {
+	padding-bottom: 8px;
+	border-top: 3px solid #fff;
+	width: 165px;
+	background-color: #EAF4F6;
+	height: 100%;
+}
+
+#menu {
+	padding: 0;
+	margin: 0;
+}
+
+#menu a {
+	text-decoration: none;
+	display:block;
+}
+
+#menu ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+#menu li {
+	margin: 0;
+	padding: 0;
+	font-size: 11px;
+	font-family: Arial;
+}
+
+#menu ul li a {
+	margin-top: 8px;
+	padding: 0 28px;
+	height: 21px;
+	line-height: 21px;
+	font-weight: bold;
+	text-transform: uppercase;
+	border-top: 1px solid #AACCD5;
+	border-bottom: 1px solid #AACCD5;
+	background-image: url(/images/li1a.gif);
+	background-position: 13px 5px;
+	background-repeat: no-repeat;
+}
+
+#menu ul li ul li a {
+	margin-top: 0;
+	height:19px;
+	line-height: 19px;
+	font-weight:normal;
+	text-transform: capitalize;
+	background-image: url(/images/li2.gif);
+	background-color: #DEECF0 ;
+	background-position: 13px 5px;
+	background-repeat: no-repeat;
+	border-top: 1px solid #EEF5F7;
+	border-bottom: 1px none #EEF5F7;
+}
+
+#menu ul li ul li ul li a {
+	background-color: #C2DCE3;
+	background-image: none;
+}
+
+#menu li li li li a {
+	padding-left: 36px;
+}
+
+#menu ul li ul li ul li ul li a {
+	background-color: #A1CEDB;
+	background-image: none;
+}
+
+#foot {
+	clear: both;
+	padding: 1em;
+	background-color: #fff;
+	/*background-image: url(/images/logo_small.gif);
+	background-repeat: no-repeat;*/
+	font-size: .8em;
+	line-height: 1.4em;
+	text-align: center;
+	/*position: relative;*/
+}
+
+
+/*
+ * list styles
+ */
+div.list_item {
+  margin-bottom:      10px;
+  width:              100%; /* Required to set IE 'hasLayout' */
+}
+
+div.list_item_header {
+  text-transform:	  uppercase;
+}
+
+/*
+ * form styles
+ */
+
+div.form_couplet {
+  clear:			  left;
+}
+
+div.form_couplet label {
+  float:              left;
+  font-size:		  0.8em;
+  margin-right:       10px;
+  margin-top:         3px;
+  text-align:         right;
+  width:              100px;
+}
+
+div.form_action {
+  clear:              left;
+  margin-left:        112px;
+}
+
+div.check_box {
+  display:            inline;
+  margin-right:       20px;
+}
+
+/*
+ * form errors
+ */
+div.fieldWithErrors {
+  background-image:   url(/images/dialog-error.png);
+  background-position:0px 3px;
+  background-repeat:  no-repeat;
+}
+
+/*
+ * notification messages
+ */
+div.notice {
+  clear:			  both;
+  font-size:		  1.1em;
+  margin-bottom:	  20px;
+}
+
+/*
+ *
+ */
+div.context_indicator {
+  border-bottom:      1px solid #7B98F8;
+  margin-bottom:      30px;
+  margin-top:         10px;
+;
+}
+/*
+ * a div for action links
+ */
+div.actions {
+  float:			  right;
+}
+
+div.actions a {
+  font-size:		  .8em;
+  text-decoration:    none;
+}

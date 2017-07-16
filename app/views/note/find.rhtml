@@ -1,0 +1,21 @@
+<h1>Find Operation</h1>
+
+<% if flash[:notice] -%>
+<div class="notice"><%= flash[:notice] %></div>
+<% end -%>
+
+<% form_tag(:action => 'found') do %>
+  <div class="form_couplet"><label for="crn">Unit number</label>
+  <%= text_field_tag('crn') %></div>
+  <div class="form_couplet"><label for="surname">Surname</label>
+  <%= text_field_tag('surname') %></div>
+  <div class="form_couplet"><label for="forename">Forename</label>
+  <%= text_field_tag('forename') %></div>
+  <div class="form_couplet"><label for="cons_surg">Consultant</label>
+  <%= text_field_tag('cons_surg') %></div>
+  <div class="form_couplet"><label for="surgeon">Surgeon</label>
+  <%= text_field_tag('surgeon') %></div>
+  <div class="form_couplet"><label for="assistant">Assistant</label>
+  <%= text_field_tag('assistant') %></div>
+  <div class="form_action"><%= submit_tag('Find') %></div>
+<% end %>

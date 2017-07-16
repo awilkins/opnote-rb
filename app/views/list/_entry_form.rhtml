@@ -1,0 +1,25 @@
+<%= human_error_messages_for(:op_list_entry, {:obj_title => 'operation', :realname => {'crn' => 'Unit Number'}}) %>
+
+<div class="form_couplet"><label for="op_list_entry_crn">Unit number</label>
+<%= text_field('op_list_entry', 'crn') %></div>
+
+<div class="form_couplet"><label for="op_list_entry_dob">Date of Birth</label>
+<%= date_select('op_list_entry', 'dob', :order => [:day, :month, :year], :start_year => DateTime.now.year - 110, :end_year => DateTime.now.year) %></div>
+
+<div class="form_couplet"><label for="op_list_entry_surname">Surname</label>
+<%= text_field('op_list_entry', 'surname') %></div>
+
+<div class="form_couplet"><label for="op_list_entry_forename">Forename</label>
+<%= text_field('op_list_entry', 'forename') %></div>
+
+<div class="form_couplet"><label for="op_list_entry_sex">Sex</label>
+<%= select('op_list_entry', 'sex', %w{Female Male}) %></div>
+
+<div class="form_couplet"><label for="op_list_entry_ward">Ward</label>
+<%= text_field('op_list_entry', 'ward') %></div>
+
+<div class="form_couplet"><label for="op_list_entry_operation">Operation</label>
+<%= text_field('op_list_entry', 'operation') %></div>
+
+<div class="form_couplet"><label for="op_list_entry_notes">Notes</label>
+<%= text_field('op_list_entry', 'notes') %></div>

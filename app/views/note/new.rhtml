@@ -1,0 +1,5 @@
+<h1>Write new Operation Note</h1>
+<% form_for :op_note, :url => { :action => 'create' } do |f| %>
+  <%= render :partial => 'form', :locals => { :f => f } %>
+  <div class="form_action"><%= submit_tag('Create') %></div>
+<% end %>

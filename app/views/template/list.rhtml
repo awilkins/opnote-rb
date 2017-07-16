@@ -1,0 +1,33 @@
+<h1>Template list</h1>
+
+<% if flash[:notice] -%>
+<div class="notice"><%= flash[:notice] %></div>
+<% end -%>
+
+<% if flash[:op_note] -%>
+<div class="context_indicator">
+  <h2>Select template for</h2>
+
+  <div class="list_item">
+    <div class="actions">
+      <%= link_to("skip-template", :action => "skip") %>
+    </div>
+    <div class="list_item_header">
+      <%= h(flash[:op_note].surname) + ", " + h(flash[:op_note].forename) + " " %>
+      <%= flash[:op_note].crn + " " + flash[:op_note].dob.strftime('%d/%m/%Y') %>
+    </div>
+    <div>
+      <%= h(flash[:op_note].operation) %>
+    </div>
+  </div>
+</div>
+<% end -%>
+
+<% for surgeon in @surgeons do -%>  
+  <h2><%= link_to_remote surgeon.surgeon, 
+      :update => "templates_for_#{surgeon.id}",
+      :url => {:action => "list_for", :id => surgeon} %></h2>
+      
+  <div id='templates_for_<%=surgeon.id%>'></div>
+
+<% end -%>

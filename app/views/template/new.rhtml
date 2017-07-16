@@ -1,0 +1,6 @@
+<h1>Create new Template</h1>
+<% form_tag(:action => "create") do %>
+  <%= render(:partial => "form") %>
+  <div class="form_action"><%= submit_tag('Create') %></div>
+<% end %>
+

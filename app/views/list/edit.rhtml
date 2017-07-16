@@ -1,0 +1,6 @@
+<h1>Edit Operation List</h1>
+<% form_tag(:action => "update", :id => @op_list) do %>
+  <%= render(:partial => "list_form") %>
+  <div class="form_action"><%= submit_tag('Update') %></div>
+<% end %>
+

@@ -1,0 +1,13 @@
+<h1>Update Anaesthetists</h1>
+
+<% if @flash[:notice] -%>
+<div class="notice"><%= @flash[:notice] %></div>
+<% end -%>
+
+<p>Please supply a CSV file without header. 3 fields are required: surname, initials, consultant (y|n).</p>
+
+<%= start_form_tag({:action => 'update_anaesthetists'}, :multipart => true) %>
+  <div class="form_couplet"><label for="anaesthetists">Select anaesthetist list</label>
+  <%= file_field_tag(:anaesthetists) %></div>
+  <div class="form_action"><%= submit_tag('Update') %></div>
+<%= end_form_tag %>

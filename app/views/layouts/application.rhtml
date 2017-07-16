@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+  <head>
+    <title>OpNote</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <%= stylesheet_link_tag("opnote", :media => "all") %>
+    <%= javascript_include_tag(:defaults )%>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="head">
+        <div id="logo">
+          <%= link_to('Notes', :controller => 'note', :action => 'list') %>
+        </div>
+        
+        <div id='slogan'>
+          <span>OpNote</span>
+        </div>
+        
+        <div id="toplinks">
+          <ul>
+          </ul>
+        </div>
+      </div>
+      
+      <div id="body">
+        <div id="visual"></div>
+        <div id="content">
+          <%= @content_for_layout %>
+        </div>
+      </div>
+      
+      <div id="side">
+        <div id="menu">
+          <ul>
+            <li><%= link_to('note', :controller => 'note', :action => 'list') %>
+              <ul>
+                <li><%= link_to('new', :controller => 'note', :action => 'new') %></li>
+                <li><%= link_to('list', :controller => 'note', :action => 'list') %></li>
+                <li><%= link_to('find', :controller => 'note', :action => 'find') %></li>
+                <li><%= link_to('logbook', :controller => 'note', :action => 'logbook') %></li>
+              </ul>
+            </li>
+            <li><%= link_to('template', :controller => 'template', :action => 'list') %>
+              <ul>
+                <li><%= link_to('new', :controller => 'template', :action => 'new') %></li>
+                <li><%= link_to('list', :controller => 'template', :action => 'list') %></li>
+              </ul>
+            </li>
+            <li><%= link_to('lists', :controller => 'list', :action => 'list') %>
+              <ul>
+                <li><%= link_to('new', :controller => 'list', :action => 'new') %></li>
+                <li><%= link_to('list', :controller => 'list', :action => 'list') %></li>
+              </ul>
+            </li>
+            <li><%= link_to('user', :controller => 'user', :action => 'login') %>
+              <ul>
+                <li><%= link_to('logout', :controller => 'user', :action => 'logout') %></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div id="foot">
+        Copyright © 2006 - 2008 Stuart Oglesby
+      </div>
+    </div>
+  </body>
+</html>

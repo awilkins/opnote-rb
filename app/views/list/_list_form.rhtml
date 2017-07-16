@@ -1,0 +1,21 @@
+<%= error_messages_for(:op_list)%>
+
+<div class="form_couplet"><label for="op_list_theatre">Theatre</label>
+<%= text_field('op_list', 'theatre') %></div>
+
+<div class="form_couplet"><label for="op_list_start_time">Date</label>
+<%= date_select('op_list', 'start_time', :order => [:day, :month, :year], :start_year => DateTime.now.year, :end_year => DateTime.now.year + 1) %></div>
+
+<div class="form_couplet"><label for="op_list_start_time">Start time</label>
+<%= select_hour(@op_list.start_time || DateTime.now, {:discard_type => true, :prefix => 'op_list[start_time(4i)]'})%>
+<%= select_minute(@op_list.start_time || DateTime.now, {:discard_type => true, :prefix => 'op_list[start_time(5i)]'})%>
+</div>
+
+<div class="form_couplet"><label for="op_list_surgeon">Surgeon</label>
+<%= text_field('op_list', 'surgeon') %></div>
+
+<div class="form_couplet"><label for="op_list_anaesthetist">Anaesthetist</label>
+<%= text_field('op_list', 'anaesthetist') %></div>
+
+<div class="form_couplet"><label for="author">Author</label>
+<%= text_field('op_list', 'list_author_name') %></div>
